@@ -1,6 +1,5 @@
 <div class="sign-in">
-
-<form>
+<form action="connexion.php">
   <div class="row mb-3">
     <label for="inputEmail3" class="col-sm-2 col-form-label">Email*</label>
     <div class="col-sm-10">
@@ -15,6 +14,5 @@
   </div>
   <button type="submit" class="btn btn-primary">Sign in</button>
 </form>
-
 </div>
 
