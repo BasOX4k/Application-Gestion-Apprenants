@@ -1,5 +1,7 @@
 <?php
 
+spl_autoload_register('ChargerClasses');
+
 function ChargerClasses($classe)
 {
     try{
@@ -17,4 +19,3 @@ function ChargerClasses($classe)
     }
 }
 
-spl_autoload_register('ChargerClasses');

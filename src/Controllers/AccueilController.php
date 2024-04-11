@@ -1,15 +1,14 @@
 <?php
 namespace src\Controllers;
 
-use Reponse as GlobalReponse;
 use src\Service\Reponse;
 
-class HomeController
+class AccueilController
 {
-    use GlobalReponse;
+    use Reponse;
 
-    public function index(): void 
-    {
+    public function homepage():void 
+    { echo ('page accueil');
         if (isset($_GET['erreur'])) {
             $erreur = htmlspecialchars($_GET['erreur']);
 

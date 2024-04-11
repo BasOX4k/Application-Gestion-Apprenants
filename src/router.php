@@ -1,6 +1,8 @@
 <?php
+use src\Controllers\AccueilController;
+// $accueilControler = new AccueilController;
 
-$route = $_SERVER['REDIRECT_URL'];
+$route = $_SERVER['REQUEST_URI'];
 $methode = $_SERVER['REQUEST_METHOD'];
 
 switch ($route){
@@ -8,8 +10,12 @@ switch ($route){
         if (isset($_SESSION['connecté'])) {
             header('location:' .HOME_URL. 'dashboard');
             die;
-        } else {
-            $AcueilControler->index();
+        } elseif($methode == "POST") {
+            var_dump($_POST);
+        }
+
+        else {
+            $accueilControler->index();
         }
         break;
 
@@ -20,7 +26,7 @@ switch ($route){
 
             } else {
                 if ($methode === 'POST') {
-                    $AccueilControler->index();
+                    $accueilControler->index();
                 }
             }
             break;
