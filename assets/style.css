@@ -3,10 +3,17 @@
     padding: auto;
     width: 500px;
     height: 400px;
-    background-color: antiquewhite;
+    background-color: rgba(44, 169, 169, 0.872);
     align-content: center;
 }
-
+.code {
+    margin: auto;
+    padding: auto;
+    width: 500px;
+    height: 400px;
+    background-color: rgba(251, 252, 252, 0.872);
+    align-content: center;
+}
 .btn-primary{
     margin-left: 200px;
     align-items: center;

@@ -1,7 +1,7 @@
 <?php
 namespace src\Service;
 
-trait GlobalReponse {
+trait Reponse {
     public function render(string $view, array $data = ['section' => '', 'action' => '']){
         if (!empty($data)) {
             foreach ($data as $key => $value) {
