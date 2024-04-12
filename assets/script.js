@@ -1,7 +1,7 @@
 const submissionButton = document.getElementById("submissionButton");
 const inputEmail = document.getElementById("email");
 const inputMDP = document.getElementById("mdp");
-
+console.log("simplon");
 if (submissionButton) {
     submissionButton.addEventListener("click", handleFormSubmission);
 
