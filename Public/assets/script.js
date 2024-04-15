@@ -1,7 +1,10 @@
 const submissionButton = document.getElementById("submissionButton");
+console.log("submissionButton");
+
 const inputEmail = document.getElementById("email");
 const inputMDP = document.getElementById("mdp");
 console.log("simplon");
+
 if (submissionButton) {
     submissionButton.addEventListener("click", handleFormSubmission);
 
@@ -10,8 +13,8 @@ if (submissionButton) {
 function handleFormSubmission(event) {
     event.preventDefault();
 
-    const inputEmail = inputEmail.value;
-    const inputMDP = inputMDP.value;
+    const inputEmailValue = inputEmail.value;
+    const inputMDPValue = inputMDP.value;
 
     const url = "/connexion";
 

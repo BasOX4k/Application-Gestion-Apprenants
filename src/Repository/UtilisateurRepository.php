@@ -9,7 +9,7 @@ class UtilisateurRepository extends Database
 {
     public function getAll()
     {
-        $data = $this->getDB()->query('SELECT * FROM user');
+        $data = $this->getDB()->query('SELECT * FROM utilisateur');
 
         $utilisateurs = [];
 

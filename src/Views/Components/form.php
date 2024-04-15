@@ -1,5 +1,5 @@
 <div class="container bg-light p-4  col-md-5 mt-5 shadow-lg p-3 mb-5">
-  <form id="formConnexion" class="d-flex flex-column mb-3">
+  <form id="formConnexion" class="d-flex flex-column mb-3" method="post">
     <div class="text-center">
       <h2>Bienvenue</h2>
     </div>

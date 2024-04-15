@@ -11,7 +11,9 @@ switch ($route){
             // header('location:' .HOME_URL. 'dashboard');
             // die;
         } elseif($methode == "POST") {
-            var_dump($_POST);
+            $accueilControler->index();
+            
+            // var_dump($_POST);
         }
 
         else {
