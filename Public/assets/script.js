@@ -1,6 +1,6 @@
 const submissionButton = document.getElementById("submissionButton");
 console.log("submissionButton");
-
+const main = document.getElementById("main");
 const inputEmail = document.getElementById("email");
 const inputMDP = document.getElementById("mdp");
 console.log("simplon");
@@ -16,7 +16,7 @@ function handleFormSubmission(event) {
     const inputEmailValue = inputEmail.value;
     const inputMDPValue = inputMDP.value;
 
-    const url = "/connexion";
+    const url = "/";
 
     const user = {
 
@@ -34,7 +34,7 @@ function handleFormSubmission(event) {
     }).then((response)=> {
         return response.text();
     }).then((result) => {
-        body.innerHTML = ''
-        body.innerHTML = result
+        main.innerHTML = ''
+        main.innerHTML = result
     });
 }

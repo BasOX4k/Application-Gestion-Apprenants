@@ -1,8 +1,6 @@
 <IfModule mod_rewrite.c>
-  # On l'allume :
   RewriteEngine on
-
-  # Rediriger toutes les urls qui iraient ailleurs que dans le dossier public vers le dossier public :
-  RewriteCond %{THE_REQUEST} !^GET.*/public [NC]
-  RewriteRule ^(.*)$ /correction/public/$1 [R=301,NE,L]
+  RewriteCond %{REQUEST_URI} !.(.)$ [NC]
+  RewriteRule   (.)  /index.php
+  ErrorDocument 404 /page-introuvable
 </IfModule>

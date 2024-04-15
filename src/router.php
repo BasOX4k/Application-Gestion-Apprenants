@@ -11,8 +11,8 @@ switch ($route){
             // header('location:' .HOME_URL. 'dashboard');
             // die;
         } elseif($methode == "POST") {
-            $accueilControler->index();
             
+            $accueilControler->authAdmin();
             // var_dump($_POST);
         }
 

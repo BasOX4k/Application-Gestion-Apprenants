@@ -7,7 +7,13 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" type="button" name="button" id="button" >Button</a>
+        <?php if (isset($_SESSION['connecté'])) { ?>
+ 
+        <a class="nav-link active" aria-current="page" type="button" id="buttonDeconnexion"  >Deconnexion</a>
+        <?php } else { ?> 
+        <a class="nav-link active" aria-current="page" type="button" id="buttonConnexion"   >Connexion</a>
+          
+          <?php } ?>
         </li>
     </div>
   </div>

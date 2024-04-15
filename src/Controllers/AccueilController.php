@@ -20,7 +20,7 @@ class AccueilController
     }
 public function index()
 {
-    include_once __DIR__ . "/../Views/dashboard.php";}    
+    include_once __DIR__ . "/../Views/connexion.php";}    
     
     public function authAdmin()
   {
@@ -32,7 +32,7 @@ public function index()
       if ($decodedRequest) {
         $email = htmlspecialchars($decodedRequest->email);
         $mdp = htmlspecialchars($decodedRequest->mdp);
-        if ($email === 'mams@gmail.com' && $mdp === 'admin') {
+        if ($email === 'mams@gmail.com' && $mdp === '$') {
           $_SESSION['connecté'] = true;
           $_SESSION['role'] = 'admin';
 
