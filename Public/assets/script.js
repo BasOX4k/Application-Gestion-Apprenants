@@ -1,17 +1,17 @@
-const submissionButton = document.getElementById("submissionButton");
-console.log("submissionButton");
-const main = document.getElementById("main");
-const inputEmail = document.getElementById("email");
-const inputMDP = document.getElementById("mdp");
-console.log("simplon");
 
-if (submissionButton) {
-    submissionButton.addEventListener("click", handleFormSubmission);
+ 
+ document.getElementById("submissionButton").addEventListener("click", handleFormSubmission);
 
-}
+console.log(submissionButton);
 
 function handleFormSubmission(event) {
     event.preventDefault();
+
+    
+const main = document.getElementById("main");
+const inputEmail = document.getElementById("email");
+const inputMDP = document.getElementById("mdp");
+
 
     const inputEmailValue = inputEmail.value;
     const inputMDPValue = inputMDP.value;

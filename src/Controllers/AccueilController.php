@@ -32,6 +32,10 @@ public function index()
       if ($decodedRequest) {
         $email = htmlspecialchars($decodedRequest->email);
         $mdp = htmlspecialchars($decodedRequest->mdp);
+        // $email = $decodedRequest->email;
+        // $mdp = $decodedRequest->mdp;
+        // var_dump($email);
+        // var_dump($mdp);
         if ($email === 'mams@gmail.com' && $mdp === '$') {
           $_SESSION['connecté'] = true;
           $_SESSION['role'] = 'admin';
@@ -39,7 +43,7 @@ public function index()
           var_dump($_SESSION['role']);
           var_dump($_SESSION['connecté']);
 
-          // $userId = 188;
+          
 
           include_once __DIR__ . '/../Views/dashboard.php';
         } else {
@@ -50,7 +54,7 @@ public function index()
         exit();
       }
     } else {
-      header('Location: ' . HOME_URL . '?erreur=connexion');
+      header('Location: ' . HOME_URL . '?erreur=request');
       exit();
     }
   }

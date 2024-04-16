@@ -3,6 +3,7 @@ namespace src\Repository;
 
 use src\Models\Cours;
 use  src\Models\Database;
+use PDO;
 {
     $data = $this->getDB()->query('SELECT * FROM cours');
 
@@ -26,7 +27,7 @@ use  src\Models\Database;
     return $courss;
 }
 
-public function create($newcours)
+function create($newcours)
 {
     $request = 'INSERT INTO cours (presence, heure_debut, code, heure_fin, date_cours) VALUES ( :nom, :prenom, :email, :mdp)';
     $query = $this->getDB()->prepare($request);

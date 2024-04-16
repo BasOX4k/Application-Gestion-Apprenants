@@ -8,7 +8,7 @@ class ValidationController
     use Reponse;
 
     public function homepage()
-    { echo ('page vaidation');
+    { echo ('page validation');
         if(isset($_GET['erreur'])) {
             $erreur = htmlspecialchars($_GET['erreur']);
         } else {

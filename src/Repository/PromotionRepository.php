@@ -1,6 +1,6 @@
 <?php
 namespace src\Repository;
-use src\Models\Promotion;
+use src\Models\Promo;
 use src\Models\Database;
 use PDO;
 
@@ -9,19 +9,19 @@ class PromotionRepository extends Database
 {
     public function getAll()
     {
-        $data = $this->getDB()->query('SELECT * FROM promotion');
+        $data = $this->getDB()->query('SELECT * FROM promo');
 
         $promotions = [];
 
-        foreach ($data as $promotion) {
-            $newPromotion = new Promotion(
-                $promotion['id'],
-                $promotion['nom_promotion'],
-                $promotion['date_debut'],
-                $promotion['date_fin'],
-                $promotion['place'],
+        foreach ($data as $promo) {
+            $newPromo = new Promo(
+                $promo['id'],
+                $promo['nom_promotion'],
+                $promo['date_debut'],
+                $promo['date_fin'],
+                $promo['place'],
             );
-            $promotion[] = $newPromotion;
+            $promo[] = $newPromo;
         
         }
 
@@ -29,17 +29,17 @@ class PromotionRepository extends Database
     
 
     }
-    public function create($newPromotion)
+    public function create($newPromo)
     {
-        $request = 'INSERT INTO utilisattilisateur (nom_promotion, date_debut, date_fin, place) VALUES ( :nom_promotion, :date_debut, :date_fin, :place)';
+        $request = 'INSERT INTO promo (nom_promotion, date_debut, date_fin, place) VALUES ( :nom_promotion, :date_debut, :date_fin, :place)';
         $query = $this->getDB()->prepare($request);
         
 
         $query->execute([
-           'nom'=> $newPromotion->getNomPromotion(),
-            'prenom'=> $newPromotion->getDateDebut  (),
-            'email' =>$newPromotion->getDateFin(),
-            'mdp' =>$newPromotion->getPlace(),
+           'nom_promotion'=> $newPromo->getNomPromotion(),
+            'date_debut'=> $newPromo->getDateDebut  (),
+            'date_fin' =>$newPromo->getDateFin(),
+            'palce' =>$newPromo->getPlace(),
             // 'Id' => $newUtilisateur->getId(),
         ]);
     }

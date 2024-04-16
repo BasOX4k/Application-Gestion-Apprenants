@@ -2,7 +2,8 @@
 
 include_once __DIR__ . "/Components/navbar.php";
 include_once __DIR__ . "/Components/header.php";
-echo "hi from dashboard"
+include_once __DIR__ . "/../Models/Promo.php";
+
 ?>
 
 <div class="content">
@@ -28,7 +29,7 @@ echo "hi from dashboard"
 
             <div class="d-flex justify-content-end">
               <!-- <span class="badge text-bg-success ">ajouter les cas</span> -->
-              <button id="" class="btn btn-info">Valider présence</button>
+              <button id="validerPresence" class="btn btn-info">Valider présence</button>
             </div>
           </div>
           <div class="card-text mb-3 bg-light">
@@ -36,7 +37,7 @@ echo "hi from dashboard"
             <p class="card-text d-flex justify-content-end"><?php echo date('d-m-Y'); ?></p>
             <div class="d-flex justify-content-end">
               <!-- <span class="badge text-bg-warning ">ajouter les cas</span> -->
-              <button id="" class="btn btn-success">Signatures recueillies</button>
+              <button id="signature" class="btn btn-success">Signatures recueillies</button>
             </div>
           </div>
         </div>
@@ -51,7 +52,7 @@ echo "hi from dashboard"
             <div>
               <h3>Toutes les promotions</h3>
             </div>
-            <button id="ajouterPromotion" class="btn btn-success">Ajouter promotion</button>
+            <button id="ajouterPromotion" type="submit" class="btn btn-success">Ajouter promotion</button>
 
 
           </div>
@@ -72,10 +73,10 @@ echo "hi from dashboard"
               <?php foreach ($promotions as $promo) : ?>
                 <tr>
                   <td class="d-none" ><?php echo $promo->getIDPromo(); ?></td>
-                  <td><?php echo $promo->getNom(); ?></td>
+                  <td><?php echo $promo->getNomPromotion(); ?></td>
                   <td><?php echo $promo->getDateDebut(); ?></td>
                   <td><?php echo $promo->getDateFin(); ?></td>
-                  <td><?php echo $promo->getPlaceDispo(); ?></td>
+                  <td><?php echo $promo->getPlace(); ?></td>
                   <td>
                     <button type="button" id="displayThisPromoBtn" class="btn btn-link">Voir</button>
                     <button type="button" class="btn btn-link">Editer</button>
