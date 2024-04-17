@@ -2,7 +2,6 @@
  
  document.getElementById("submissionButton").addEventListener("click", handleFormSubmission);
 
-console.log(submissionButton);
 
 function handleFormSubmission(event) {
     event.preventDefault();

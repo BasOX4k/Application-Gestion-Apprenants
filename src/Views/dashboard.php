@@ -1,9 +1,8 @@
 <?php
 
-// include_once __DIR__ . "/Components/navbar.php";
-// include_once __DIR__ . "/Components/header.php";
+
 include_once __DIR__ . "/../Models/Promo.php";
-include_once __DIR__ . "/Components/addPromotion.php";
+
 
 ?>
 
@@ -49,12 +48,47 @@ include_once __DIR__ . "/Components/addPromotion.php";
         <div id="contentPromotion">
 
 
-          <div class="d-flex justify-content-between my-3 mx-2">
+          <div class="d-flex flex-column justify-content-between my-3 mx-2">
             <div>
               <h3>Toutes les promotions</h3>
             </div>
             <button id="ajouterPromotion" type="submit" class="btn btn-success">Ajouter promotion</button>
 
+<h3 class="m-3">Création d’une promotion</h3>
+
+<p class="m-3">tableau des promotions de Simplon</p>
+
+
+<form  data-set="id" class="p-3 m-5 bg-light text-dark" method="post">
+
+    <input type="hidden" name="form_id" value="1">
+
+    <div class="mb-3">
+        <label for="promoNom" class="form-label">Nom de la promotion</label>
+        <input type="text" name="promoNom" class="form-control" id="promoNom" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+        <label for="dateDebut" class="form-label">Date de début</label>
+        <input type="date" name="dateDebut" class="form-control" id="dateDebut" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+        <label for="dateFin" class="form-label">Date de fin</label>
+        <input type="date" name="dateFin" class="form-control" id="dateFin" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+        <label for="placeDispo" class="form-label">Place(s) disponible(s)</label>
+        <input type="number" name="place" class="form-control" id="place" aria-describedby="emailHelp">
+    </div>
+
+    <div class="  d-flex justify-content-between mb-3">
+        <input id="btnRetourVersTousLesPromo" class=" mb-3 btn btn-primary" value="Retour"  > 
+
+        <input id="createNewPromoBtn" type="submit" class="mb-3 btn btn-primary" value="Sauvegarder"  > 
+
+    </div>
+
+   </form>
+   </div>
 
           </div>
           <p class="my-3 mx-2">tableau des promotions de Simplon</p>

@@ -31,5 +31,9 @@ switch ($route){
             break;
 
             case HOME_URL. 'deconnexion':
+                if(isset ($_SESSION['déconnecté'])) {
+                    header('location:/connexion');
+                    die;
+                }
                 
 }

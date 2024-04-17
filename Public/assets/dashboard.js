@@ -1,5 +1,5 @@
-document.getElementById("createNewPromoBtn").addEventListener("click", createNewPromoBtn);
-console.log(createNewPromoBtn);
+document.getElementById("createNewPromoBtn").addEventListener("click", handleAddPromotion);
+console.log(handleAddPromotion);
 
 function handleAddPromotion(event) {
     event.preventDefault();
@@ -8,21 +8,21 @@ function handleAddPromotion(event) {
     const inputPromoNom = document.getElementById("promoNom");
     const inputDateDebut = document.getElementById("dateDebut");
     const inputDateFin = document.getElementById("dateFin");
-    const inputPlaceDispo = document.getElementById("placeDispo");
+    const inputPlace = document.getElementById("place");
 
 
         const inputPromoNomValue = inputPromoNom.value;
         const inputDateDebutValue = inputDateDebut.value;
         const inputDateFinValue = inputDateFin.value;
-        const inputPlaceDispoValue = inputPlaceDispo.value;
+        const inputPlaceValue = inputPlace.value;
 
         const url = "/";
 
         const promo = {
             promoNom: inputPromoNomValue,
             dateDebut: inputDateDebutValue,
-            dateFIn: inputDateFinValue,
-            placeDispo: inputPlaceDispoValue,
+            dateFin: inputDateFinValue,
+            place: inputPlaceValue,
         };
 
         fetch(url, {
