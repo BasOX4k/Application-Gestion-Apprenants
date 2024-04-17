@@ -39,7 +39,7 @@ class PromotionRepository extends Database
            'nom_promotion'=> $newPromo->getNomPromotion(),
             'date_debut'=> $newPromo->getDateDebut  (),
             'date_fin' =>$newPromo->getDateFin(),
-            'palce' =>$newPromo->getPlace(),
+            'place' =>$newPromo->getPlace(),
             // 'Id' => $newUtilisateur->getId(),
         ]);
     }

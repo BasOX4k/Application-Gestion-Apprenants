@@ -40,8 +40,8 @@ public function index()
           $_SESSION['connecté'] = true;
           $_SESSION['role'] = 'admin';
 
-          var_dump($_SESSION['role']);
-          var_dump($_SESSION['connecté']);
+          // var_dump($_SESSION['role']);
+          // var_dump($_SESSION['connecté']);
 
           
 

@@ -1,8 +1,9 @@
 <?php
 
-include_once __DIR__ . "/Components/navbar.php";
-include_once __DIR__ . "/Components/header.php";
+// include_once __DIR__ . "/Components/navbar.php";
+// include_once __DIR__ . "/Components/header.php";
 include_once __DIR__ . "/../Models/Promo.php";
+include_once __DIR__ . "/Components/addPromotion.php";
 
 ?>
 
@@ -69,7 +70,7 @@ include_once __DIR__ . "/../Models/Promo.php";
                 <th scope="col">Actions</th>
               </tr>
             </thead>
-            <tbody>
+            <!-- <tbody>
               <?php foreach ($promotions as $promo) : ?>
                 <tr>
                   <td class="d-none" ><?php echo $promo->getIDPromo(); ?></td>
@@ -84,7 +85,7 @@ include_once __DIR__ . "/../Models/Promo.php";
                   </td>
                 </tr>
               <?php endforeach; ?>
-            </tbody>
+            </tbody> -->
           </table>
 
 
