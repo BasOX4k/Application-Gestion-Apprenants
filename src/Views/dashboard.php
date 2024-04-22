@@ -52,9 +52,22 @@ include_once __DIR__ . "/../Models/Promo.php";
             <div>
               <h3>Toutes les promotions</h3>
             </div>
-            <button id="ajouterPromotion" type="submit" class="btn btn-success">Ajouter promotion</button>
+            <!-- <button id="ajouterPromotion" type="submit" class="btn btn-success">Ajouter promotion</button> -->
 
 <h3 class="m-3">Création d’une promotion</h3>
+<p class="my-3 mx-2">tableau des promotions de Simplon</p>
+
+<table class="table  my-3 mx-2">
+  <thead>
+    <tr>
+    <th class="d-none" scope="col">IDPromo</th>
+      <th scope="col">Promotions</th>
+      <th scope="col">Début</th>
+      <th scope="col">Fin</th>
+      <th scope="col">Place</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
 
 <p class="m-3">tableau des promotions de Simplon</p>
 
@@ -91,35 +104,8 @@ include_once __DIR__ . "/../Models/Promo.php";
    </div>
 
           </div>
-          <p class="my-3 mx-2">tableau des promotions de Simplon</p>
-
-          <table class="table  my-3 mx-2">
-            <thead>
-              <tr>
-              <th class="d-none" scope="col">IDPromo</th>
-                <th scope="col">Promotions</th>
-                <th scope="col">Début</th>
-                <th scope="col">Fin</th>
-                <th scope="col">Place</th>
-                <th scope="col">Actions</th>
-              </tr>
-            </thead>
-            <!-- <tbody>
-              <?php foreach ($promotions as $promo) : ?>
-                <tr>
-                  <td class="d-none" ><?php echo $promo->getIDPromo(); ?></td>
-                  <td><?php echo $promo->getNomPromotion(); ?></td>
-                  <td><?php echo $promo->getDateDebut(); ?></td>
-                  <td><?php echo $promo->getDateFin(); ?></td>
-                  <td><?php echo $promo->getPlace(); ?></td>
-                  <td>
-                    <button type="button" id="displayThisPromoBtn" class="btn btn-link">Voir</button>
-                    <button type="button" class="btn btn-link">Editer</button>
-                    <button type="button" class="btn btn-link">Supprimer</button>
-                  </td>
-                </tr>
-              <?php endforeach; ?>
-            </tbody> -->
+      
+           
           </table>
 
 

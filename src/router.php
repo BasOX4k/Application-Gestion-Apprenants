@@ -10,6 +10,7 @@ switch ($route){
 
         if($methode == "POST") {
            
+            // $accueilController->authAdmin();
             $accueilController->authAdmin();
         }
 
@@ -20,7 +21,7 @@ switch ($route){
 
         case HOME_URL. 'connexion':
             if (isset ($_SESSION['connecté'])) {
-                header('location:/dashboard');
+                header('/dashboard');
                 die;
 
             } else {

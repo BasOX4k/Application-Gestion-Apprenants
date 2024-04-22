@@ -32,17 +32,12 @@ public function index()
       if ($decodedRequest) {
         $email = htmlspecialchars($decodedRequest->email);
         $mdp = htmlspecialchars($decodedRequest->mdp);
-        // $email = $decodedRequest->email;
-        // $mdp = $decodedRequest->mdp;
-        // var_dump($email);
-        // var_dump($mdp);
+        
         if ($email === 'mams@gmail.com' && $mdp === '$') {
           $_SESSION['connecté'] = true;
           $_SESSION['role'] = 'admin';
 
-          // var_dump($_SESSION['role']);
-          // var_dump($_SESSION['connecté']);
-
+          
           
 
           include_once __DIR__ . '/../Views/dashboard.php';
@@ -58,7 +53,8 @@ public function index()
       exit();
     }
   }
-    
+
+  
     // public function auth()
     // {
         
