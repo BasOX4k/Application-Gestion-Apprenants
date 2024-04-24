@@ -1,10 +1,13 @@
 # Application-Gestion-Apprenants
 # N'oubliez pas de modifier le fichier config.php
 
-define("DATABASE_HOST", "votre hostserver");
-define("DATABASE_NAME", "le nom de votre database");
-define("DATABASE_USERNAME", "le nom d'utilisateur lié à votre database");
-define("DATABASE_PASSWORD", "le mot de passe de votre database");
+("DATABASE_HOST", "votre hostserver");
+
+("DATABASE_NAME", "le nom de votre database");
+
+("DATABASE_USERNAME", "le nom d'utilisateur lié à votre database");
+
+("DATABASE_PASSWORD", "le mot de passe de votre database");
 
 
 
